@@ -1,7 +1,6 @@
 package com.example.springsecurity.web;
 
-import com.example.springsecurity.domain.posts.Posts;
-import com.example.springsecurity.service.PostsService;
+import com.example.springsecurity.service.PostService;
 import com.example.springsecurity.web.dto.PostsListResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +14,7 @@ import java.util.List;
 @RequestMapping("/api/v1/")
 public class PostsApiController {
 
-    private final PostsService postsService;
+    private final PostService postsService;
 
     @GetMapping("/posts")
     public List<PostsListResponseDto> findAll() {

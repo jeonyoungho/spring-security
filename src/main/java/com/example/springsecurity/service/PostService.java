@@ -1,7 +1,6 @@
 package com.example.springsecurity.service;
 
-import com.example.springsecurity.domain.posts.Posts;
-import com.example.springsecurity.domain.posts.PostsRepository;
+import com.example.springsecurity.domain.post.PostRepository;
 import com.example.springsecurity.web.dto.PostsListResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -12,9 +11,9 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-public class PostsService {
+public class PostService {
 
-    private final PostsRepository postsRepository;
+    private final PostRepository postsRepository;
 
     @Transactional(readOnly = true)
     public List<PostsListResponseDto> findAllDesc() {

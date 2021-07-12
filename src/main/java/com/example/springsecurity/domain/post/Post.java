@@ -1,4 +1,4 @@
-package com.example.springsecurity.domain.posts;
+package com.example.springsecurity.domain.post;
 
 import com.example.springsecurity.domain.BaseTimeEntity;
 import lombok.AccessLevel;
@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
-public class Posts extends BaseTimeEntity {
+public class Post extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,7 +24,7 @@ public class Posts extends BaseTimeEntity {
     private String content;
 
     @Builder
-    public Posts(String title, String content) {
+    public Post(String title, String content) {
         this.title = title;
         this.content = content;
     }

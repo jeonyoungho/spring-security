@@ -13,3 +13,20 @@ spring:
       jdbc-url: jdbc:h2:mem:testdb;MODE=MYSQL
       username: sa
       password: sapw
+  mustache:
+    expose-request-attributes: true
+
+springdoc:
+  version: '@project.version@'
+  api-docs:
+    path: /api-docs
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
+  swagger-ui:
+    operations-sorter: alpha
+    tags-sorter: alpha
+    path: /swagger-ui.html
+    disable-swagger-default-url: true
+    display-query-params-without-oauth2: true
+  paths-to-match:
+    - /api/v1/**

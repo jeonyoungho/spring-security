@@ -1,6 +1,6 @@
 package com.example.springsecurity.web;
 
-import com.example.springsecurity.service.PostService;
+import com.example.springsecurity.service.PostsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @RequiredArgsConstructor
 public class IndexController {
 
-    private final PostService postsService;
+    private final PostsService postsService;
 
     @GetMapping("/index")
     public String index(Model model) {
